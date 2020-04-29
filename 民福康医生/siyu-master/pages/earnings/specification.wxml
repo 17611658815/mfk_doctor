@@ -1,0 +1,24 @@
+<template name="specification">
+    <view class='toast-box'>
+        <view class='toast-box-content'>
+            <view class='toast-box-content-title'>
+               收益发放说明
+            </view>
+            <view class='toast-box-content-item'>
+               1.通过资质认证的医生，音频审核通过后，收益满200元即可发放；
+            </view>
+            <view class='toast-box-content-item'>
+               2.若您的银行卡信息尚未完善，收益将在信息完善后进行发放； 
+            </view>
+            <view class='toast-box-content-item'>
+               3.累计收益经线上核算后于次月25日发放至您预留的个人银行账户，非工作日自动延期，具体以实际到账为准；
+            </view>
+            <view class='toast-box-content-item'>
+              4.如有疑问，请致电民福康客服电话010-59231588。
+            </view>
+            
+            <view class='toast-box-content-btn' catchtap='check'>知道了</view>
+            <image catchtap='check' class='delicon' src='../../images/icon/del_icon.png'></image>
+        </view>
+    </view>
+</template>

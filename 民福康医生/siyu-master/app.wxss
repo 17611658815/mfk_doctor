@@ -1,0 +1,207 @@
+/**app.wxss**/
+@import "pages/mayarticle/mayarticle.wxss";
+@import "template/noMsgtmp/noMsgtmp.wxss";
+@import "template/noMoney/noMoney.wxss";
+@import "template/centerNavheader/centerNavheader.wxss";
+@import "template/bankCardToast/bankCardToast.wxss";
+@import "template/MoneyHeader/MoneyHeader.wxss";
+@import "template/doctorInfo/doctorinfo.wxss";
+
+page {
+    font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.dpb{
+    display: flex;
+    align-items: center
+}
+/* 弹性布局 */
+.dp{
+    display: flex;
+}
+           
+.dpfa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dpfC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dpf {
+    display: flex;
+    align-items: center;
+}
+.dpfb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 字号 */
+.fontSize-20 {
+    font-size: 20rpx;
+}
+.fontSize-22 {
+    font-size: 22rpx;
+}
+.fontSize-24 {
+    font-size: 24rpx;
+}
+.fontSize-26 {
+    font-size: 26rpx;
+}
+.fontSize-28 {
+    font-size: 28rpx;
+}
+.fontSize-30 {
+    font-size: 30rpx;
+}
+.fontSize-32 {
+    font-size: 32rpx;
+}
+.fontSize-34 {
+    font-size: 34rpx;
+}
+.fontSize-36 {
+    font-size: 36rpx;
+}
+.fontSize-40{
+    font-size: 40rpx;
+}
+.fontSize-45 {
+    font-size: 45rpx;
+}
+.maegin-left{
+    margin-left: 20rpx;
+}
+.db {
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+
+
+
+.border{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0rpx;
+  border-radius: 44rpx;
+  width: 0;
+  height: 6rpx;
+  background: #53a2ef;
+  transition: all .2s;
+}
+
+.borderhover{
+  content: "";
+  width: 100%;
+  height: 5rpx;
+  bottom: 0rpx;
+  border-radius: 44rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #53a2ef;
+  transition: all .2s;
+}
+
+/* 模态框 */
+.doctor-content{
+    width: 90%;
+    margin: auto;
+}
+.toast-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0,0,0,.5);
+    z-index: 99;
+}
+.toast-box-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    background: #ffffff;
+    border-radius: 20rpx;
+}
+.toast-box-content-title{
+    padding: 80rpx 0 50rpx 0;
+    font-size: 36rpx;
+    color: #333333;
+    text-align: center;
+    font-weight: 500;
+    
+}
+.toast-box-content-item{
+    font-size: 28rpx;
+    color: #333333;
+    width: 85%;
+    margin: auto;
+    line-height: 50rpx;
+    margin-bottom: 26rpx;
+}
+.toast-box-content-btn{
+    text-align: center;
+    padding: 40rpx 0;
+    font-size: 36rpx;
+    color: #6ea3f7;
+    border-top: 1rpx solid #e2e2e2;
+    margin-top: 66rpx;
+}
+.delicon{
+    width: 34rpx;
+    height: 34rpx;
+    position: absolute;
+    right: 40rpx;
+    top: 40rpx;
+}
+.gotop{
+    width: 90rpx;
+    height: 90rpx;
+    position: fixed;
+    bottom: 130rpx;
+    right: 50rpx;
+}

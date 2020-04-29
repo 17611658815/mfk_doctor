@@ -1,0 +1,102 @@
+/* pages/recycleList /recycleList .wxss */
+.recycleList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+.recycleList-item{
+    width: 90%;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recycleList-item-left{
+    width: 500rpx;
+}
+.recycleList-item-left>view:nth-child(1){
+    width: 100%;
+    font-size: 32rpx;
+    color: #333333;
+    
+}
+.recycleList-item-left>view:nth-child(2)>text:nth-child(1){
+    width: 140rpx;
+    height: 60rpx;
+    padding: 5rpx 10rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-top: 10rpx;
+    font-size: 20rpx;
+    transform: scale(0.5);
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+}
+.recycleList-item-left>view:nth-child(2)>text:nth-child(2){
+   font-size: 24rpx;
+    color: #999999;
+}
+.passed{
+  color: white;
+  border: 1rpx solid #80D540;
+  background: #6FC653;
+}
+.review{
+  color: white;
+  border: 1rpx solid #f6a218;
+  background: #F78735;
+}
+.noThrough{
+  color: white;
+  border: 1rpx solid #f96766;
+  background: #F64E5F;
+}
+.recycleList-item-right{
+width: 123rpx;
+height: 58rpx;
+text-align: center;
+line-height: 58rpx;
+color: white;
+font-size: 28rpx;
+border-radius: 44px 44px 44px 44px;
+background: #6ea7f7;
+}
+
+
+
+/* 没问题列表 */
+
+.noClassBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 190rpx 0 0;
+    margin-top: 150rpx;
+}
+
+.noting {
+    width: 300rpx;
+    height: 200rpx;
+    margin: 0 auto;
+}
+
+.prompt {
+    width: 70%;
+    display: block;
+    font-size: 28rpx;
+    color: #666;
+    margin-top: 50rpx;
+    text-align: center;
+}
+
+.fastTitleBox {
+    width: 660rpx;
+    height: 88rpx;
+    padding: 0 53rpx;
+    line-height: 88rpx;
+    background: #f8f8f8f8;
+}

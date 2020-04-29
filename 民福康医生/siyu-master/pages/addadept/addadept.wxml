@@ -1,0 +1,30 @@
+<view class='content'>
+    <view class='adept'>擅长疾病</view>
+    <view class='textareaBox'>
+        <view class='add'>
+            <input placeholder-class="phcolor2" value='{{inpval}}' bindinput='addadep' placeholder='请逐个添加您擅长的疾病'></input>
+        </view>
+        <view wx:if='{{!noadep}}'>
+            <view bindtap="addPuhs" 
+                data-name='{{item.name}}' 
+                data-id="{{item.id}}" 
+                class="listItem" 
+                wx:for="{{adeptList}}" 
+                wx:key='key'>
+                {{item.name}}
+            </view>
+        </view>
+        <view class="listItem" wx:else>
+            暂无相关疾病~
+        </view>
+        <view class="hintText">请逐个添加您擅长的疾病,点击疾病添加</view>
+        <view class='addtitle' wx:if="{{adeptInfo!=0}}">已添加的疾病</view>
+        <view class='adeptlist' wx:if="{{adeptInfo!=0}}">
+            <view wx:for="{{adeptInfo}}" class="adeptitem" wx:key='key'>
+                {{item.name}}
+                <view data-index='{{index}}' bindtap='deladep' class='delicon'>-</view>
+            </view>
+        </view>
+        <button class='nextStep' wx:if="{{adeptInfo!=0}}" bindtap='setDoctorIllness'>确定</button>
+    </view>
+</view>

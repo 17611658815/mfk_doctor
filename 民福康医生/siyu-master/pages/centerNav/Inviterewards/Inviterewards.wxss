@@ -1,0 +1,25 @@
+.noMsg-box{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.noMsg-box image{
+    width: 283rpx;
+    height: 219rpx;
+    margin-top: 140rpx;
+}
+.noMsg-box-btn{
+    width:90%;
+    height:100rpx;
+    font-size:34rpx;
+    line-height:100rpx;
+    border-radius:50rpx;
+    text-align:center;
+    background:linear-gradient(#6EAFF7, #6E9FF7);
+    color:#ffffff;
+    border: none;
+    margin-top: 120rpx;
+
+}

@@ -1,0 +1,34 @@
+<scroll-view scroll-y="true" bindscrolltolower="pullUpLoad">
+    <view class='page-body'>
+        <view class='color'>
+            <view class='videoTitle'>
+                <view>{{articleList.title}}</view>
+                <view>
+                    <text>{{articleList.created}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='doctorInfo'>
+            <view class='InfoBox' data-id="{{articleList.doctor.id}}" bindtap='gomfk'>
+                <view>
+                    <image src='{{articleList.doctor.avatar}}'></image>
+                </view>
+                <view>
+                    <view>
+                        <text>{{articleList.doctor.name}}</text>
+                        <text>{{articleList.doctor.position}}</text>
+                    </view>
+                    <view>
+                        <text>{{articleList.doctor.hospital}}</text>
+                        <text>{{articleList.doctor.department}}</text> </view>
+                </view>
+            </view>
+            <view style='height:50rpx' wx:if="{{articleList.doctor == false}}"></view>
+            <view class='title'>
+                <view wx:for='{{articleList.content}}'>
+                    {{item}}
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

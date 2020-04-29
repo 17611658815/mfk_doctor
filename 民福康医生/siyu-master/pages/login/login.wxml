@@ -1,0 +1,73 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+    <view class='mfklogo'>
+        <image class="mfk" src="../../images/mfk.png"></image>
+    </view>
+    <view class="loginTab">
+        <view data-index='0' class="{{currentTab==0 ?'checkedActice':'itemBox'}}" bindtap="switchTab">我是医生</view>
+        <view data-index='1' class="{{currentTab==1 ?'checkedActice':'itemBox'}}" bindtap="switchTab">引荐名医</view>
+    </view>
+    <!-- 医生登录 -->
+    <view class="cBody" wx:if="{{currentTab==0}}">
+        <view class="inputBox">
+            <view class="phoneBox box clearfix">
+                <image class="inputPic phonePic db fl" src="../../images/phone.png"></image>
+                <input class="inputB input db fl" type='number' value="{{phone}}" placeholder-class="phcolor" placeholder="请输入手机号" bindinput="savePhone"></input>
+            </view>
+            <view class="phoneBox box clearfix">
+                <image class="inputPic phonePic db fl" src="../../images/pass.png"></image>
+                <input class="inputS input db fl" type='number' value="{{pwd}}" placeholder-class="phcolor" placeholder="请输入动态验证码" bindinput="savePwd"></input>
+                <label class='leabers' bindtap='sendCode' wx:if="{{noSend}}">获取验证码</label>
+                <label class='leabers2' wx:if="{{!noSend}}">{{num}}s</label>
+            </view>
+        </view>
+        <view class="subBox">
+            <button class="subBtn db" bindtap="submit">登 录</button>
+        </view>
+         <view class="section">
+            <checkbox-group class="checkBox clearfix" name="checkbox">
+                <image class="agreePic db fl" src="../../images/unchecked.png" bindtap="checkboxChange" wx:if="{{agree == false}}"></image>
+                <image class="agreePic db fl" src="../../images/checked.png" bindtap="checkboxChange" wx:else></image>
+                <label class="line fl">我已阅读并接受医生的
+                    <text class="agreement" bindtap="goAgreement">用户协议</text>
+                </label>
+            </checkbox-group>
+        </view>
+
+    </view>
+    <!-- 渠道登录 -->
+    <view class="cBody" wx:if="{{currentTab==1}}">
+        <view class="inputBox">
+            <view class="phoneBox box clearfix">
+                <image class="inputPic phonePic db fl" src="../../images/phone.png"></image>
+                <input class="inputB input db fl" type='number' value="{{phone2}}" placeholder-class="phcolor" placeholder="请输入手机号" bindinput="savePhone"></input>
+            </view>
+            <view class="phoneBox box clearfix">
+                <image class="inputPic phonePic db fl" src="../../images/pass.png"></image>
+                <input class="inputS input db fl" type='number' value="{{pwd2}}" placeholder-class="phcolor" placeholder="请输入动态验证码" bindinput="savePwd"></input>
+                <label class='leabers' bindtap='sendCode2' wx:if="{{noSend2}}">获取验证码</label>
+                <label class='leabers2' wx:if="{{!noSend2}}">{{num2}}s</label>
+            </view>
+        </view>
+        <view class="subBox">
+            <button class="subBtn db" bindtap="submit2">登 录</button>
+        </view>
+        <view class="section">
+            <checkbox-group class="checkBox clearfix" name="checkbox">
+                <image class="agreePic db fl" src="../../images/unchecked.png" bindtap="checkboxChange" wx:if="{{agree == false}}"></image>
+                <image class="agreePic db fl" src="../../images/checked.png" bindtap="checkboxChange" wx:else></image>
+                <label class="line fl">我已阅读并接受医生的
+                    <text class="agreement" bindtap="goAgreement">用户协议</text>
+                </label>
+            </checkbox-group>
+        </view>
+    </view>
+    <view class='register'>
+        <text>还没有账号？</text>
+        <text bindtap='goRegister'>立即注册</text>
+    </view>
+</view>
+<!-- 错误提示 -->
+<view class="msgBox" style="display:{{isHide}};">
+    <text class="errorMsg">{{errorMsg}}</text>
+</view>

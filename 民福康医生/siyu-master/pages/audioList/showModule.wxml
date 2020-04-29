@@ -1,0 +1,20 @@
+<template name="bankCard">
+    <view class='toast-box'>
+        <view class='toast-box-content'>
+            <view class='toast-box-content-title'>
+               提示
+            </view>
+            <view class='toast-box-content-item' style='padding-left:100rpx'>
+             如出现问题分配不妥，无题可答的情况:
+            </view>
+            <view class='toast-box-content-item' style='padding-left:100rpx'>
+            ① 请搜索您擅长的疾病；
+            </view>
+            <view class='toast-box-content-item' style='padding-left:100rpx'>
+             ②请点击【联系客服】增加题目；
+            </view>
+            <view class='toast-box-content-btn' catchtap='closeToast'>我知道了</view>
+            <image catchtap='closeToast' class='delicon' src='../../images/icon/del_icon.png'></image>
+        </view>
+    </view>
+</template>

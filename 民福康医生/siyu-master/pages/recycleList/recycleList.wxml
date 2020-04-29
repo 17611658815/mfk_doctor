@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="recycleList" wx:if='{{recycleList.length>0}}'>
+        <view class="recycleList-item" bindtap="goDetaile" data-id="{{item.id}}" data-status="{{item.status}}" wx:for='{{recycleList}}'>
+            <view class="recycleList-item-left">
+                <view>{{item.title}}</view>
+                <view>
+                    <text class="noThrough" wx:if='{{item.status==3}}'>转译失败</text>
+                    <text class="passed" wx:if='{{item.status==4}}'>转译成功</text>
+                    <text class="review" wx:if='{{item.status==0}}'>转译中</text>
+                    <text>{{item.created}}</text>
+                </view>
+            </view>
+            <view class="recycleList-item-right">
+                查看
+            </view>
+        </view>
+    </view>
+   <view class='noClass' wx:else>
+        <view class="noClassBox">
+            <image class="noting db" src="../../images/kb.png"></image>
+            <text class="prompt db">您暂无转换失败音频</text>
+        </view>
+    </view>
+</view>

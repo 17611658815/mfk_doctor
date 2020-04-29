@@ -1,0 +1,5 @@
+<template name="showMsg">
+    <view class='showMsg-box'>
+          建议您选择【草稿箱转译】，直接回答下一题，稍后再进入草稿箱内查看~
+    </view>
+</template>

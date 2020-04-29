@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="cBody">
+        <text class="titleS db">民福康医生合作条款</text>
+        <text class="content db strong">为与民福康进行拍摄合作，您应当阅读并遵守《民福康医生拍摄合作协议》（以下简称：本协议）。请您务必审慎阅读、充分理解各条款内容。</text>
+        <text class="content db strong">除非您已充分阅读、完全理解并接受本协议所有条款，否则您无法与民福康进行合作。您点击“同意”或“下一步”，或您已经与民福康进行该等事项的合作，或者以其他任何明示或者默示方式表示接受本协议的，均视为您已阅读并同意签署本协议。本协议即在您与民福康之间产生法律效力，成为对双方均具有约束力的法律文件。</text>
+        <text class="content3 db">一、协议的范围</text>
+        <text class="content db content3">本协议是本人与民福康之间关于拍摄医疗健康科普视频、知识问答（包含语音问答和文字问答）和收录科普文章事宜所订立的协议。“民福康”是指江苏民福康科技股份有限公司。</text>
+        <text class="content3 db">二、本人理解并同意：</text>
+        <text class="content db content3">1、配合民福康进行医疗健康科普视频及语音知识问答的拍摄录制。</text>
+        <text class="content db content3">2、民福康对全过程进行拍摄、录音、录像，以实体及电子形式储存、制作。</text>
+        <text class="content db content3">3、民福康制作完成的医疗健康科普视频、知识问答（包含语音问答和文字问答）、科普文章已经过本人确认。</text>
+        <text class="content db content3">1、配合民福康进行医疗健康科普视频及语音知识问答的拍摄录制。</text>
+        <text class="content3 db">三、知识产权声明</text>
+        <text class="content db content3">民福康拥有所拍摄、制作的医疗健康科普视频、知识问答（包含语音问答和文字问答）、科普文章等完整的著作权、邻接权等一切权利、权益，可将前述内容可以通过包括但不限于百度熊掌号、mfk.com、39yst.com等线上线下多平台传播。</text>
+        <text class="content3 db">四、协议生效与变更</text>
+        <text class="content db content3">1、签署本协议即视为已阅读本协议并接受本协议的约束。</text>
+        <text class="content db content3">2、民福康有权在必要时修改本协议条款，本人可以在相关服务页面查阅最新版本的协议条款。</text>
+        <text class="content db content3">3、本协议条款变更后，如果继续与民福康进行本协议约定事项之合作，即视为已已接受变更后的协议。</text>
+        <text class="content db content3">4、合作期限为本协议签署之日起至长期。</text>
+        <text class="content3 db">五、管辖与适用法律</text>
+        <text class="content db content3">1、本协议的成立、生效、履行、解释及纠纷解决等相关事宜，均适用中华人民共和国大陆地区法律（不包括冲突法）。</text>
+        <text class="content db content3">2、本协议签订地为中华人民共和国江苏省淮安市经济技术开发区。</text>
+        <text class="content db content3">3、若本人和民福康之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交本协议签订地（即中国江苏省淮安市经济技术开发区）有管辖权的人民法院管辖。</text>
+        <text class="content db content3">4、本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。</text>
+    </view>
+</view>

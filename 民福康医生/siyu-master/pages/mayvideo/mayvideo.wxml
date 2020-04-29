@@ -1,0 +1,34 @@
+<import src="../../template/noMsgtmp/noMsgtmp.wxml"></import>
+<scroll-view style='height:100%;width:100%;' wx:if='{{flag}}'>
+    <view class='mayvideo-header' wx:if='{{count>0}}'>
+        <image src='../../images/maivideo_bg.jpg'></image>
+        <view class='mayvideo-header-num'>{{count}}</view>
+        <view class='mayvideo-header-title'>拍摄视频（期）</view>
+    </view>
+    <view class='mayvideo-tabber' wx:if='{{count>0}}'>
+        <view wx:for='{{tabberArr}}' bindtap='swatchTab' class='mayvideo-tabber-item {{currentTab==index ? "clickClass":""}}' data-index='{{index}}' wx:key='key'>
+            <text>{{item}}</text>
+            <view class='{{currentTab==index? "borderhover":"border"}}'></view>
+        </view>
+    </view>
+    <view class='Paging-list'>
+        <view class='Paging-list-item' wx:for='{{doctorVideoList}}' wx:key='key' data-id='{{item.id}}' bindtap='goVideo'>
+            <view class='Paging-list-item-image'>
+                <image class='thubs' src='{{item.thumb}}'></image>
+                <image class='play' src='../../images/Listplay.png'></image>
+                <view  class='timer'>{{item.duration}}</view>
+            </view>
+            <view class='Paging-list-item-right'>
+                <view class='Pagingvideo-list-item-title' style='margin:0'>
+                    {{item.title}}
+                </view>
+                <view class='Pagingvideo-list-item-hot'>
+                    <image src='../../images/icon/check_icon.png'></image>
+                    <text style='margin-left: 10rpx;'>{{item.pv}}</text>
+                    <text style='margin-left: 20rpx;'>{{item.created}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<template is="noMsg" data='{{fn:fn,text:"您还未拍摄过视频哟~",btntetx:"了解如何预约拍摄"}}' wx:else></template>

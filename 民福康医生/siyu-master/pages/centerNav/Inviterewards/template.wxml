@@ -1,0 +1,7 @@
+<template name="template">
+    <view class="noMsg-box">
+         <image src='../../../images/nomsg-img.png'></image>
+         <view style='margin-top:88rpx;font-size:28rpx;color:#666666'>{{text}}</view>
+         <button class='noMsg-box-btn' bindtap="fn" open-type='share' >{{btntetx}}</button>
+    </view>
+</template>

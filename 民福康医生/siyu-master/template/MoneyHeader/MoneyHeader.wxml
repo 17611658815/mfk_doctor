@@ -1,0 +1,9 @@
+<template name="MoneyHeader">
+    <view class="MoneyHeader_box">
+        <view class="MoneyHeader_box_item" wx:for='{{title}}'>
+            <view class="MoneyHeader_box_item_title">{{item}}</view> 
+            <view class="MoneyHeader_box_item_money">2</view> 
+        </view>
+        
+    </view>
+</template>

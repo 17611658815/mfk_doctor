@@ -1,0 +1,81 @@
+.mayvideo-header{
+    width: 100%;
+    height: 220rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mayvideo-header image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220rpx;
+}
+.mayvideo-header view{
+    z-index: 9
+}
+.mayvideo-header-num{
+    font-size: 70rpx;
+    color: #ffffff;
+    font-weight: 500;
+}
+.mayvideo-header-title{
+    font-size: 32rpx;
+    color: #ffffff;
+}
+.mayvideo-tabber{
+    display: flex;
+    font-size: 32rpx;
+    background: #ffffff;
+    box-shadow: 0 10rpx 20rpx #eee;
+    margin-bottom: 20rpx;
+    justify-content: space-around;
+}
+
+.clickClass{
+    color: #6ea8f7
+}
+.mayvideo-tabber-item{
+    padding: 40rpx 0;
+     position: relative;
+}
+.Paging-list{
+    width: 95%;
+    margin: auto;
+}
+.Paging-list-item{
+    width: 95%;
+    margin: auto;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.Paging-list-item-hot image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.Paging-list-item-title{
+    font-size: 30rpx;
+    color: #333333;
+    font-weight: 500;
+}
+.Paging-list-item-txt{
+    font-size: 28rpx;
+    color: #666666;
+    margin-top: 26rpx;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+}
+.Paging-list-item-hot{
+    font-size: 20rpx;
+    color: #999999;
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+}

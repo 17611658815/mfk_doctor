@@ -1,0 +1,29 @@
+.MoneyHeader_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20rpx 0;
+    background: #6ea8f7;
+}
+.MoneyHeader_box_item{
+    flex: 1;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.MoneyHeader_box_item:nth-child(2){
+    border-left: 1rpx solid #ffffff;
+    border-right: 1rpx solid #ffffff;
+
+}
+.MoneyHeader_box_item_title{
+    font-size: 42rpx;
+    color: #ffffff;
+}
+.MoneyHeader_box_item_money{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #ffffff;
+}

@@ -1,0 +1,17 @@
+<import src="../../../template/centerNavheader/centerNavheader.wxml"></import>
+<import src="../../../template/doctorInfo/doctorinfo.wxml"></import>
+<import src="template.wxml"></import>
+<import src="../../../template/showToast.wxml"></import>
+<scroll-view style='height:100%;width:100%;'>
+    <view class='mayvideo-header'>
+        <template is="centerNavheader" data='{{textArr:textArr,showExplain:showExplain,invitationNum:invitationNum,profit:profit,mouthProfit:mouthProfit}}'></template>
+    </view>
+    <view class='doctor-content'>
+        <view style='font-size:32rpx;color:#333333;margin-top:40rpx;font-weight:500' wx:if='{{doctorList.length>0}}'>已邀请好友</view>
+        <template is="doctorinfo" wx:if='{{doctorList.length>0}}' data="{{doctorList:doctorList}}"></template>
+        <template is="template" data='{{fn:onShareAppMessage,text:"暂无满足邀请条件的好友，再接再厉哟~",btntetx:"邀请好友赚奖励",btnShow:true}}' wx:if="{{doctorList.length==0}}"></template>
+    </view> 
+</scroll-view>
+
+<template is="showToast" wx:if='{{showToast}}'></template>
+

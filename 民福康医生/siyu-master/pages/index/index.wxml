@@ -1,0 +1,139 @@
+<import src="../../template/bankCardToast/bankCardToast.wxml"></import>
+<view wx:if='{{is == "expert"}}'>
+
+<scroll-view class="commonIllnessBox" scroll-y="true" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" wx:if="{{show && !maintain}}">
+         <!-- <navigator url='/pages/Uploadagain/Uploadagain'>去注册1</navigator>
+        <navigator url='/pages/nextStep/nextStep'>去注册2</navigator>
+        <navigator url='/pages/certification/certification'>去注册3</navigator> -->
+        <!-- 提示去传银行卡信息 -->
+      <template is="bankCard" data="{{closeToast:closeToast,gomaybankCard:gomaybankCard}}" wx:if='{{toastFlag}}'></template>
+    <view class='container' wx:if="{{show}}">
+        <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+            <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+            <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+        </view>
+        <view class="headBox clearfix">
+            <swiper class="swiper" 
+                indicator-dots='true' 
+                indicator-color='rgba(255,255, 255, .3)'
+                indicator-active-color="#ffffff" 
+                autoplay="{{autoplay}}" 
+                circular='true'     
+                interval="{{interval}}" 
+                duration="{{durations}}">
+                <swiper-item bindtap="goFlow" data-type="flow4">
+                    <image class="slide-image" src="../../images/banner4.jpg"></image>
+                </swiper-item>
+                <swiper-item bindtap="goFlow" data-type="flow3" data-title="关于我们">
+                    <image class="slide-image" src="../../images/banner3.jpg"></image>
+                </swiper-item>
+                <swiper-item bindtap="goFlow" data-type="flow1" data-title="操作流程">
+                    <image class="slide-image" src="../../images/banner.png"></image>
+                </swiper-item>
+                  <swiper-item bindtap="goFlow" data-type="flow5" data-title="操作流程">
+                    <image class="slide-image" src="https://api.mfk.com/statics/images/flowChart/flow_banner.jpg"></image>
+                </swiper-item>
+                <swiper-item bindtap="goFlow" data-type="flow2" data-title="操作流程">
+                    <image class="slide-image" src="../../images/zwzdbanner.jpg"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class='modeule' wx:if='{{iphoneX}}'>
+            <view class='modeuleBox'>
+                <navigator hover-class='none' url='/pages/audioList/audioList'>
+                    <view class='modeuleBox_box'>
+                        <view>
+                            <image class='hom_icon1' src='../../images/hom_icon1.png'></image>
+                            <view>有声问答</view>
+                        </view>
+                    </view>
+                </navigator>
+                 <navigator hover-class='none' url="{{doctor_rank_level>=3 ? '':'/pages/ask/ask'}}">
+                    <view class='modeuleBox_box'>
+                        <view>
+                            <image class='hom_icon4' src="{{doctor_rank_level>=3 ? '../../images/hom_icon4_4.png':'../../images/hom_icon4.png'}}"></image>
+                            <view>自问自答</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator hover-class='none' url='/pages/Videoappointments/Videoappointments'>
+                    <view class='modeuleBox_box top'>
+                        <view>
+                            <image class='hom_icon2' src='../../images/hom_icon2.png'></image>
+                            <view>视频拍摄</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator hover-class='none' url='/pages/article/article'>
+                    <view class='modeuleBox_box top'>
+                        <view>
+                            <image class='hom_icon3' src='../../images/hom_icon3.png'></image>
+                            <view>文章发布</view>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view class='modeule' wx:else>
+            <view class='modeuleBox'>
+                <navigator hover-class='none' url='/pages/audioList/audioList'>
+                    <view class='modeuleBox_box_X' style='height:{{windowWidth/windowHeight * 750+20}}px'>
+                        <view>
+                            <image class='hom_icon1' src='../../images/hom_icon1.png'></image>
+                            <view>有声问答</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator hover-class='none' url="{{doctor_rank_level>=3 ? '':'/pages/ask/ask'}}">
+                    <view class='modeuleBox_box_X' style='height:{{windowWidth/windowHeight * 750+20}}px' bindtap='goAsk'>
+                        <view>
+                           <image class='hom_icon4' src="{{doctor_rank_level>=3 ? '../../images/hom_icon4_4.png':'../../images/hom_icon4.png'}}"></image>
+                            <view>自问自答</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator hover-class='none' url='/pages/Videoappointments/Videoappointments'>
+                    <view class='modeuleBox_box_X top' style='height:{{windowWidth/windowHeight * 750+20}}px' bindtap='goVideoappointments'>
+                        <view>
+                            <image class='hom_icon2' src='../../images/hom_icon2.png'></image>
+                            <view>视频拍摄</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator hover-class='none' url='/pages/article/article'>
+                    <view class='modeuleBox_box_X top' style='height:{{windowWidth/windowHeight * 750+20}}px' bindtap='goarticle'>
+                        <view>
+                            <image class='hom_icon3' src='../../images/hom_icon3.png'></image>
+                            <view>文章发布</view>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class='maintain' wx:if='{{maintain}}'>
+      <image mode='widthFix' src='{{imgUrl}}'></image>
+</view>
+</view>
+<!-- 渠道人 -->
+<view  wx:if='{{is == "channel" && userid!=""}}'>
+ <template is="bankCard" data="{{toastFlag:toastFlag,closeToast:closeToast,gomaybankCard:gomaybankCard}}" wx:if='{{toastFlag}}'></template>
+    <image style="width:100%; display: block;  margin-bottom: 106rpx;" mode="widthFix" src="https://api.mfk.com/statics/images/channel_img.jpg?1111"></image>
+     <view class='item_box'></view>
+
+        <button class="shareBtn" bindtap="onShareAppMessage" hover-class="none" open-type='share'>
+            邀请医生入驻
+    </button>
+</view>
+<!-- 自定义tabbar -->
+<view class="tabbar" wx:if='{{show}}'>
+    <view class="barBtn clearfix">
+        <image class="btnIcon db" src="../../images/home_selected.png"></image>
+        <text class="btnName db active">工作站</text>
+    </view>
+    <view class="barBtn clearfix" bindtap="goCenter">
+        <image class="btnIcon db" src="../../images/center.png"></image>
+        <text class="btnName db">我的</text>
+    </view>
+</view>

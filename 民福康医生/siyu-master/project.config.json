@@ -1,0 +1,107 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx73f3f9dbbe7c49e0",
+	"projectname": "%E6%B0%91%E7%A6%8F%E5%BA%B7%E5%8C%BB%E7%94%9F",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/maybankCard/maybankCard",
+					"pathName": "pages/maybankCard/maybankCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earnings/earnings",
+					"pathName": "pages/earnings/earnings",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "擅长疾病",
+					"pathName": "pages/addadept/addadept",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/textRecord/textRecord",
+					"pathName": "pages/textRecord/textRecord",
+					"query": "questionId=1662280&is_self=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/audioList/audioList",
+					"pathName": "pages/audioList/audioList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "录音",
+					"pathName": "pages/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加擅长疾病",
+					"pathName": "pages/addadept/addadept",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "答题前必读",
+					"pathName": "pages/recordingHint/recordingHint",
+					"query": "type=2",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "录音草稿",
+					"pathName": "pages/recycleList/recycleList",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

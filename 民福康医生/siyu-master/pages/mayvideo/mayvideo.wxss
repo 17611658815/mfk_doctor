@@ -1,0 +1,67 @@
+.Paging-list-item {
+    display: flex;
+    
+}
+.Paging-list-item-image{
+    height: 160rpx;
+    position: relative;
+}
+.Paging-list-item-image .thubs{
+    width: 260rpx;
+    height: 100%;
+    border: 1rpx solid #e2e2e2;
+    border-radius: 10rpx;
+    
+}
+.Paging-list-item-image .play{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+    
+}
+.Paging-list-item-image .timer{
+    width:80rpx;
+    height:35rpx;
+    border-radius:50rpx;
+    background:rgba(0,0,0,.2);
+    font-size:25rpx;
+    text-align:center;
+    line-height:35rpx;
+    color:#ffffff;
+    position:absolute;
+    bottom:20rpx;
+    right:15rpx;
+}
+.Paging-list-item-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20rpx;
+}
+.Pagingvideo-list-item-title{
+    font-size: 30rpx;
+    color: #000000;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+}
+.Pagingvideo-list-item-hot{
+     font-size: 20rpx;
+    color: #999999;
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+}
+.Pagingvideo-list-item-hot image{
+    width: 30rpx;
+    height: 30rpx;
+}

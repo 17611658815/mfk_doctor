@@ -1,0 +1,175 @@
+<!--pages/center/center.wxml-->
+<scroll-view class="container" scroll-y="true" wx:if='{{is == "expert"}}'>
+    <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+        <text class="fastTitle">您的医生资质尚未认证，认证后收益才能发放哟~ </text>
+        <text class="fastBtn" style="margin-left:10rpx;" bindtap="goCertification">去认证</text>
+    </view>
+    <view class="fastTitleBox clearfix" wx:if='{{has_bank == 0 && cooperation!=""}}'>
+        <text class="fastTitle">您的银行卡尚未添加,完善后收益才能发放哟~</text>
+        <text class="fastBtn" style="margin-left:20rpx;" bindtap="gomaybankCard">添加</text>
+    </view>
+    <view class="defeated" wx:if='{{has_bank == 1 && bank_status==2}}'>
+        <text class="fastTitle" style="margin-left:30rpx">银行卡审核未通过，未通过原因：{{bank_msg}}</text>
+        <text class="fastBtn" style="margin-left:20rpx;margin-right:30rpx" bindtap="gomaybankCard">重新提交</text>
+    </view>
+    <view class="userInfo">
+        <image class="mineBg db fl" src="../../images/userBg.png"></image>
+        <view class="user">
+            <view class="picBox">
+                 <view class="userPic db">
+                    <image mode="widthFix" src="{{(userInfoAvatar != '') ? userInfoAvatar : '../../images/head.png'}}"></image>
+                </view>
+                <view class='nickNameBox'>
+                    <text class="userName db">{{nickName}}</text>
+                    <text class="userMsg db" bindtap='gomayInformation'>查看·编辑个人资料 > </text>
+                </view>
+                <!-- <view class='goMFK' bindtap='gomfk' wx:if='{{count_num>0}}'>我的主页</view> -->
+            </view>
+                <view class='earnings_list'>
+                    <view class='earnings_list_item' bindtap="goearnings" data-index='0'>
+                        <view class='earnings_list_item_money'>￥{{profit.sure}}</view>
+                        <view class='earnings_list_item_title'>预计收益</view>
+                    </view>
+                    <view class='earnings_list_item' bindtap="goearnings" data-index='1'>
+                        <view class='earnings_list_item_money'>￥{{profit.month}}</view>
+                        <view class='earnings_list_item_title'>待结算收益</view>
+                    </view>
+                    <view class='earnings_list_item' bindtap="goearnings" data-index='2'>
+                        <view class='earnings_list_item_money'>￥{{profit.total}}</view>
+                        <view class='earnings_list_item_title'>累计收益</view>
+                    </view>
+                </view>
+        </view>
+        <view class="userInfo_nav_item">
+            <navigator hover-class='none'  wx:for='{{moneyList}}' url='{{item.path}}' wx:key='key'>
+                <view class='userInfo_nav_item_box'>
+                    <image class='userInfo_nav_item_icon' style="width:44rpx;height:46rpx" src='{{item.icon}}'></image>
+                    <view class='userInfo_nav_item_text'>{{item.name}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class='banner_box'>
+        <image src='../../images/maypage_banner.jpg'></image>
+        <navigator hover-class='none' url='/pages/Invitedoctor/Invitedoctor'>
+            <view class='invitation-btn'>去邀请</view>
+        </navigator>
+    </view>
+    <view class="msgBox2 {{index==4 ?'boderTop':''}}" wx:for='{{navigitList}}' wx:key='key'>
+        <navigator hover-class='none' url='{{item.path}}'>
+            <view class='msgList2'>
+                <view>
+                    <image class="tagPic db fl" src="{{item.icon}}"></image>
+                    <text class="msgTitle db fl {{item.name == '有声问答草稿箱' ? 'red':''}}">{{item.name}}</text>
+                </view>
+                <view>
+                    <image class='rights' src='../../images/right_img.png'></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class='msgBox2'>
+        <view class='msgList2' bindtap='callUp'>
+            <view>
+                <image class="tagPic db fl" src="../../images/service.png"></image>
+                <text class="msgTitle db fl">客服电话</text>
+            </view>
+            <view>
+                010-59231588
+            </view>
+        </view>
+    </view>
+   <button class='{{isIphoneX ? "delmsg4":"delmsg"}}' bindtap='PullDownRefresh'>退出登录</button>
+</scroll-view>
+<scroll-view class="container" scroll-y="true" wx:if='{{is == "channel"}}'>
+    <view class="fastTitleBox clearfix" wx:if='{{has_bank == 0}}'>
+        <text class="fastTitle">您的银行卡尚未添加,完善后收益才能发放哟~ </text>
+        <text class="fastBtn" style="margin-left:20rpx;" bindtap="gomaybankCard">添加</text>
+    </view>
+     <view class="defeated" wx:if='{{has_bank == 1 && bank_status==2}}'>
+     <text class="fastTitle" style="margin-left:30rpx">银行卡审核未通过，未通过原因：{{bank_msg}}</text>
+        <text class="fastBtn" style="margin-left:20rpx;margin-right:30rpx" bindtap="gomaybankCard">重新提交</text>
+    </view>
+    <view class="userInfo">
+        <image class="mineBg db fl" src="../../images/userBg.png"></image>
+        <view class="user">
+            <view class="picBox">
+                <view></view>
+                <image class="userPic db"  
+                       mode="aspectFill" 
+                       src="{{(userInfoAvatar != '') ? userInfoAvatar : '../../images/channel_img.png'}}"></image>
+                <view class='nickNameBox'>
+                    <text class="userName db">{{nickName}}</text>
+                    <text class="userMsg db" bindtap='gomayInformation'>查看·编辑个人资料 > </text>
+                </view>
+            </view>
+            <view class='earnings_list'>
+                <view class='earnings_list_item' bindtap="goearnings" data-index='0'>
+                    <view class='earnings_list_item_money'>￥{{profit.sure}}</view>
+                    <view class='earnings_list_item_title'>预计收益</view>
+                </view>
+                <view class='earnings_list_item' bindtap="goearnings" data-index='1'>
+                    <view class='earnings_list_item_money'>￥{{profit.month}}</view>
+                    <view class='earnings_list_item_title'>待结算收益</view>
+                </view>
+                <view class='earnings_list_item' bindtap="goearnings" data-index='2'>
+                    <view class='earnings_list_item_money'>￥{{profit.total}}</view>
+                    <view class='earnings_list_item_title'>累计收益</view>
+                </view>
+            </view>
+        </view>
+        <view class="userInfo_nav_item">
+            <navigator hover-class='none' wx:for='{{moneyList2}}' url='{{item.path}}' wx:key='key'>
+                <view class='userInfo_nav_item_box'>
+                    <image class='userInfo_nav_item_icon' style="width:44rpx;height:46rpx" src='{{item.icon}}'></image>
+                    <view class='userInfo_nav_item_text'>{{item.name}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class='banner_box'>
+        <image src='../../images/maypage_banner.jpg'></image>
+        <navigator hover-class='none' url='/pages/Invitedoctor/Invitedoctor'>
+            <view class='invitation-btn'>去邀请</view>
+        </navigator>
+    </view>
+    <view class="msgBox2 {{index==4 ?'boderTop':''}}" wx:for='{{navigitList2}}' wx:key='key'>
+        <navigator hover-class='none' url='{{item.path}}'>
+            <view class='msgList2'>
+                <view>
+                    <image class="tagPic db fl" src="{{item.icon}}"></image>
+                    <text class="msgTitle db fl">{{item.name}}</text>
+                </view>
+                <view>
+                    <image class='rights' src='../../images/right_img.png'></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class='msgBox2'>
+        <view class='msgList2' bindtap='callUp'>
+            <view>
+                <image class="tagPic db fl" src="../../images/service.png"></image>
+                <text class="msgTitle db fl">客服电话</text>
+            </view>
+            <view>
+                010-59231588
+            </view>
+        </view>
+    </view>
+    <button class='{{isIphoneX ? "delmsg4":"delmsg"}}' bindtap='PullDownRefresh'>退出登录</button>
+</scroll-view>
+<!-- 自定义tabbar -->
+<view class="tabbar">
+    <view class="barBtn clearfix" bindtap="goHome">
+        <image class="btnIcon db" src="../../images/home.png"></image>
+        <text class="btnName db">工作站</text>
+    </view>
+    <view class="barBtn clearfix">
+        <image class="btnIcon db" src="../../images/center_selected.png"></image>
+        <text class="btnName db active">我的</text>
+    </view>
+</view>
+<view class="msgBoxs" style="display:{{isHide}};">
+    <text class="errorMsg">退出成功</text>
+</view>

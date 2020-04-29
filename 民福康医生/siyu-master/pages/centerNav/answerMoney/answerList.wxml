@@ -1,0 +1,10 @@
+<template name="answerList">
+    <view class='answerList-content' wx:for='{{questionList}}' wx:key='key'>
+        <view class='answerList-content-title'>
+            {{item.title}}
+        </view>
+        <view class='answerList-content-timer'>
+            <text>{{item.time}}</text>
+        </view>
+    </view>
+</template>

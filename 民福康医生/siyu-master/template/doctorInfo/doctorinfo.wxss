@@ -1,0 +1,38 @@
+/* 医生信息 */
+.InfoBox{
+  margin:auto;
+  display: flex;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.userPic{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.userPic image{
+    width: 90rpx;
+    height: 90rpx;
+}
+.InfoBox>view:nth-child(2){
+  flex: 1;
+  margin-left: 38rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.leftName text{
+     font-size: 32rpx;
+    color: #000000;
+    padding-right: 10rpx;
+}
+.doctor_name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

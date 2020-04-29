@@ -1,0 +1,80 @@
+/* pages/depositapply/depositapply.wxss */
+.apply{
+    width: 90%;
+    margin: auto;
+}
+.apply_title{
+    width: 94%;
+    font-size: 32rpx;
+    color: #333333;
+    padding: 40rpx 0 40rpx 0;
+    font-weight: 500;
+    margin: auto;
+}
+.applyInput{
+    width: 94%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1rpx solid #e2e2e2;
+    padding: 24rpx 0;
+     margin: auto;
+}
+.applyInput view{
+    font-size: 50rpx;
+    color: #333333;
+    font-weight: 600;
+}
+.applyInput input{
+    font-size: 50rpx;
+    color: #333333;
+    font-weight: 600;
+}
+.apply-time{
+    width: 94%;
+    font-size: 26rpx;
+    color: #999999;
+    margin: auto;
+    margin-top: 40rpx;
+}
+.applyMethod{
+    width: 100%;
+    padding: 30rpx 0;
+    background: #f8f8f8;
+    margin-top: 40rpx;
+    border-radius: 10rpx;
+}
+.apply_type{
+    width: 94%;
+    margin: auto;
+    font-size: 32rpx;
+    color: #333333;
+    font-weight: 500;
+}
+.apply_type_icon{
+     width: 94%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.apply_type_icon_left{
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #333333;
+    
+}
+.apply_type_icon_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.apply_type_icon_left image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+.apply_type_icon_right image{
+    width: 35rpx;
+    height: 25rpx;
+}

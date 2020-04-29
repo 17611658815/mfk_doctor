@@ -1,0 +1,19 @@
+<import src="../../../template/noMoney/noMoney.wxml"></import>
+<scroll-view style='height:100%;width:100%;' wx:if='{{depositList.length>0}}'>
+    <view class='deposit-content' wx:for='{{depositList}}' wx:key='key'>
+        <view class='deposit-content-money'>
+            <text style='color:#000000'>{{item.comment}}</text>
+            <text style='color:#333333'>￥{{item.money}}</text>
+        </view>
+        <view class='deposit-content-time'>
+            收益发放时间：
+            <text>{{item.time}}</text>
+        </view>
+    </view>
+</scroll-view>
+<view class='contens' wx:if='{{flag}}'>
+    <view>
+         <image src='../../../images/nomsg-img.png'></image>
+         <view class='textCenter' style='margin-top:88rpx;font-size:28rpx;color:#666666'>暂无收益明细</view>
+    </view>
+</view>

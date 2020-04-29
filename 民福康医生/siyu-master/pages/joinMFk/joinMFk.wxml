@@ -1,0 +1,22 @@
+<view wx:if='{{shereType == 0}}'>
+    <scroll-view style='height:100%;width:100%'>
+        <view class='header-title'>
+            <text style='color:#6ea8f7'>{{doctorName}}</text>邀请您加入民福康医生 </view>
+        <image mode='widthFix' src='https://api.mfk.com/statics/images/invite_img.jpg?666'></image>
+    </scroll-view>
+    <view class='item_box'></view>
+    <view class='bootm-btn' bindtap='goregister'>
+        加入民福康 共谱大健康
+    </view>
+</view>
+<view wx:if='{{shereType == 1}}'>
+    <scroll-view style='height:100%;width:100%'>
+        <view class='header-title'>
+            <text style='color:#6ea8f7'>{{channelName}}</text>邀请您加入民福康医生 </view>
+            <image mode='widthFix' src='https://api.mfk.com/statics/images/invite_img.jpg?666'></image>
+    </scroll-view>
+    <view class='item_box'></view>
+    <view class='bootm-btn' bindtap='goregister'>
+        加入民福康 共谱大健康
+    </view>
+</view>

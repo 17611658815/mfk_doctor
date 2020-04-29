@@ -1,0 +1,26 @@
+<template name="showToast">
+    <view class='toast-box'>
+        <view class='toast-box-content'>
+            <view class='toast-box-content-title'>
+                奖励在路上说明
+            </view>
+            <view class='toast-box-content-item'>
+                奖励在路上的原因可能有以下几点，请您耐心等待哟~
+            </view>
+            <view class='toast-box-content-item'>
+                a.注册医生太多，审核周期较长；
+            </view>
+            <view class='toast-box-content-item'>
+                b.您邀请的医生注册后并未进行资质认证；
+            </view>
+            <view class='toast-box-content-item'>
+                c.您邀请的医生注册认证后正在审核中；
+            </view>
+            <view class='toast-box-content-item'>
+                d.成功邀请的医生答题，音频正在审核中。
+            </view>
+            <view class='toast-box-content-btn' catchtap='showExplain'>知道了</view>
+            <image catchtap='showExplain' class='delicon' src='../../../images/icon/del_icon.png'></image>
+        </view>
+    </view>
+</template>

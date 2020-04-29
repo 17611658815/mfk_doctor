@@ -1,0 +1,68 @@
+<!--pages/audio/audio.wxml-->
+<view class='status'>
+    <view class='no_tetx'>
+        <view wx:if='{{status == 4}}'> 离线转译完成，请校对文字确保无误后再提交哦~</view>
+        <view wx:if='{{status == 3}}'> 很抱歉，该音频需要重新录制，别灰心，请点击【重录】</view>
+        <view wx:if='{{status == 0}}'>正在离线转译中，请您稍后再查看，并校对文字</view>
+        <view wx:if='{{status != 0}}' class="button" bindtap='anewRecord'>重录</view>
+    </view>
+</view>
+<view class='page-body'>
+    <!-- 疾病信息 -->
+    <view class='color'>
+        <view class='videoTitle'>
+            <view>{{title}}</view>
+            <view>
+                <text>{{created}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 专家信息 -->
+    <view class='doctorInfo' wx:if="{{doctor.name!=''}}">
+        <view class='InfoBox' data-id="{{audioList.doctor.id}}" bindtap='godoctorHomeanswer'>
+            <view class="userPic db">
+                <image mode="widthFix" src="{{(doctor.pic != '') ? doctor.pic : '../../images/head.png'}}"></image>
+            </view>
+            <view>
+                <view>
+                    <text>{{doctor.name}}</text>
+                    <text>{{doctor.doctor_rank}}</text>
+                </view>
+                <view>
+                    <text>{{doctor.hospital}}</text>
+                    <text>{{doctor.department}}</text> </view>
+            </view>
+        </view>
+        <!-- 音频播放开关  -->
+        <view class='audiosBox' wx:if="{{src!=''}}">
+            <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+                <image class='image2' src="../../images/play.png" />
+            </view>
+            <view class="audioOpen" bindtap="Play" wx:if="{{isOpen2}}">
+                <image class='image2' src="../../images/play.png" />
+            </view>
+            <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{!isOpen2 && isOpen}}">
+                <image src="../../images/pause.png" />
+            </view>
+            <view class='slid'>
+                <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+                <view>
+                    <text class='times'>{{starttime}}</text>
+                    <text class='times'>{{durations}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='title'>
+            <view>
+                语音内容
+            </view>
+        </view>
+        <view class="textaerBox">
+            <textarea placeholder-class='placActive' maxlength="1000" value="{{record_txt}}" bindinput="textaerChange" placeholder='...'>
+            </textarea>
+        </view>
+    </view>
+</view>
+<button class="submit" bindtap="saveExpertAnswer" disabled="{{status!=4}}">
+    提交
+</button>

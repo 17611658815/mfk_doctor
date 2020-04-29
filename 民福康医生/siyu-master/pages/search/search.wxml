@@ -1,0 +1,76 @@
+<!--pages/search/search.wxml-->
+<view class='container' wx:if="{{pageChange}}">
+
+  <!-- 搜索框 -->
+  <view class="searchBox">
+    <view class="search clearfix">
+      <input class="searchInput fl" bindinput='searchMsgs' bindconfirm='searchIllness' value='{{searchMsg}}' placeholder-class="phcolor" placeholder="请输入疾病或问题关键词"></input>
+      <text class="lineShu db fl"></text>
+      <image class="searchIcon fr" bindtap='searchIllness' src="../../images/search.png"></image>
+    </view>
+  </view>
+  <!-- <block wx:for="{{searchResultDatas}}" wx:key="key">
+    <view class="search-result-item">
+      <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' bindtap="chooseSearchResultAction" data-id="{{item.id}}" data-val='{{item.title}}' />
+    </view>
+  </block> -->
+  <view class='related_box'>
+    <view wx:for="{{illnessList}}" bindtap='searchHot' data-value="{{item.tittle}}" data-id="{{item.id}}" wx:key='key' class='illness'>
+      {{item.tittle}}</view>
+  </view>
+  <!-- 热门搜索 -->
+  <view class='houSearch' wx:if='{{speciality.length>0}}'>
+    <view>
+      <text>您所属科室的热门搜索：</text>
+    </view>
+    <view>
+      <label bindtap='searchSpeciality' wx:for="{{speciality}}" wx:key='key' data-id='{{item.name}}'>{{item.name}}</label>
+    </view>
+  </view>
+  <view class='recordMsg'>
+    <label data-value="{{item}}" bindtap='searchHot2' wx:for="{{searchRecord}}" wx:key='key'>{{item}}</label>
+  </view>
+</view>
+
+
+<view wx:if="{{!pageChange}}" class="{{no_off || illnessArray.length<18 && illnessArray.length!=0? 'marginTop':''}}">
+    <import src="toast.wxml"></import>
+    <!-- <template is="showMsg"></template> -->
+    <template is="showMsg" wx:if='{{no_off || illnessArray.length<18 && illnessArray.length!=0}}'></template>
+  <view class="page-body">
+    <view class="commonIllnessList" wx:if="{{illnessArray.length>0}}">
+      <block wx:for='{{illnessArray}}' wx:key="id">
+        <view bindtap="gotoRecord" class='question' data-title="{{item.title}}" data-questionId="{{item.id}}" data-age="{{item.age}}" data-question="{{item.question}}">
+          <view class='content'>
+            <view class='content_box'>
+              <view class='question_title'>
+                <view class='question_title_title'>{{item.title}}
+                   <image src='../../images/green.png' wx:if="{{item.is_car > 0}}"></image>
+                    <image src='../../images/tuijian.png' wx:else></image>
+                </view>
+              </view>
+              <view class='docNum'>
+                <view>
+                  <text>{{item.doc_num}}名医生可答</text>
+                </view>
+                <view>
+                  <view class='price'></view>
+                  <view class='answer'>抢答</view>
+                </view>
+              </view>
+              <view class='askNum'>{{item.ask_num}}人在寻求此问题的答案</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='nomsg' wx:else>
+      <view>
+        <image src="../../images/nomsg-img.png"></image>
+        <view class='msg1'>抱歉，暂时还没有相关数据！ </view>
+        <view class='msg1'>您可以试试<view style="position: relative;color: #6ea7f7;padding: 0 10rpx;"> 联系客服 <button class="notingBtn" open-type='contact' hover-class='none' ></button> </view> 增加您所在科室的问题哟~</view>
+      </view>
+    </view>
+  </view>
+</view>
+<image class="gotop" src="../../images/top.png" bindtap="goTop" wx:if='{{isGoTop}}'></image>

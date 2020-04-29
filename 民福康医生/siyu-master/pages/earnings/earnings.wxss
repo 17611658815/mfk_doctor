@@ -1,0 +1,207 @@
+.eamings-header {
+    width: 100%;
+    height: 310rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moneyBg {
+    width: 100%;
+    height: 310rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.eamings-header view {
+    z-index: 99;
+}
+
+.eamings-item-txt {
+    position: absolute;
+    right: 60rpx;
+    top: 35rpx;
+}
+
+.fontSize1 {
+    font-size: 26rpx;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.fontSize2 {
+    font-size: 32rpx;
+    color: #fff;
+}
+.soliderS{
+    height: 50rpx;
+    width: 3rpx;
+    background: #ffffff;
+}
+.eamings-item-num {
+    font-size: 60rpx;
+    color: #fff;
+    font-weight: 500;
+}
+
+button::after {
+    border: none;
+}
+
+.eamings-item-btn button {
+    width: 178rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    font-size: 28rpx;
+    color: #fff;
+    border-radius: 50rpx;
+    border: 1rpx solid #fff;
+    margin-top: 28rpx;
+    background: none;
+}
+
+.eamings-item-month {
+    display: flex;
+    justify-content: center;
+    margin-top: 50rpx;
+}
+
+.eamings-item-month-right {
+    margin-left: 100rpx;
+}
+
+.eamings-state {
+    font-size: 26rpx;
+    color: #fff;
+    position: absolute;
+    right: 40rpx;
+    top: 40rpx;
+}
+
+.eamings-list-title {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 40rpx;
+    font-weight: 500;
+    font-size: 32rpx;
+}
+
+.eamings-list-title image {
+    width: 41rpx;
+    height: 41rpx;
+    margin-right: 20rpx;
+}
+
+.deposit-content {
+    width: 90%;
+    margin: auto;
+    padding: 40rpx 0;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.deposit-content-money {
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.deposit-content-time {
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 20rpx;
+}
+
+.deposit-content-time text {
+    margin-right: 20rpx;
+}
+
+.fastTitleBox {
+    width: 100%;
+    height: 88rpx;
+    display: flex;
+    padding: 0 53rpx;
+    line-height: 88rpx;
+    background: #f8f8f8f8;
+}
+
+.fastTitle {
+    font-size: 28rpx;
+    color: #ff7f29;
+}
+
+.fastBtn {
+    width: 136rpx;
+    height: 60rpx;
+    background: #6e9ff7;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 75rpx;
+    margin-top: 15rpx;
+}
+
+.nomsg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nomsg>image {
+    width: 283rpx;
+    height: 219rpx;
+    margin-top: 140rpx;
+}
+
+.nomsg .goaudioList {
+   width:90%;
+    height:100rpx;
+    font-size:34rpx;
+    line-height:100rpx;
+    border-radius:50rpx;
+    text-align:center;
+    background:linear-gradient(#6EAFF7, #6E9FF7);
+    color:#ffffff;
+    border:none;
+    margin-top:120rpx;
+
+}
+/* 新增样式 */
+.headerTabBox{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.headerTabBox_item{
+    flex: 1;
+    height: 95rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.activeClass{
+      flex: 1;
+    height: 95rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 500;
+}
+.fontSize3{
+    font-size: 38rpx;
+     color: #fff;
+}
+.fontSize4{
+    font-size: 38rpx;
+     color: rgba(255, 255, 255, 0.7);
+
+}

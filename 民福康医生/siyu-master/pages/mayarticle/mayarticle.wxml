@@ -1,0 +1,26 @@
+<import src="../../template/noMsgtmp/noMsgtmp.wxml"></import>
+<!-- <scroll-view style='height:100%;width:100%;' wx:if='{{flag}}'>
+    <view class='mayvideo-header' wx:if='{{count>0}}'>
+        <image src='../../images/maivideo_bg.jpg'></image>
+        <view class='mayvideo-header-num'>{{count}}</view>
+        <view class='mayvideo-header-title'>发布文章（期）</view>
+    </view>
+    <view class='mayvideo-tabber' wx:if='{{count>0}}'>
+        <view wx:for='{{tabberArr}}' bindtap='swatchTab' class='mayvideo-tabber-item {{currentTab==index ? "clickClass":""}}' data-index='{{index}}' wx:key='key'>
+            <text>{{item}}</text>
+            <view class='{{currentTab==index? "borderhover":"border"}}'></view>
+        </view>
+    </view>
+    <view class='Paging-list'>
+        <view class='Paging-list-item' wx:for='{{doctorArticleList}}' bindtap='goToarticle' data-id='{{item.id}}' wx:key='key'>
+            <view class='Paging-list-item-title'>{{item.title}}</view>
+            <view class='Paging-list-item-txt'>{{item.description}}</view>
+            <view class='Paging-list-item-hot'>
+                <image src='../../images/icon/check_icon.png'></image>
+                <text style='margin-left: 10rpx;'>{{item.pv}}万</text>
+                <text style='margin-left: 20rpx;'>{{item.created}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view> -->
+<template is="noMsg" data='{{fn:fn,text:"您还未发布文章哟~",btntetx:"了解如何发布文章"}}'></template>

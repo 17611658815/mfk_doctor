@@ -1,0 +1,7 @@
+<template name="noMsg">
+    <view class="noMsg-box">
+         <image src='../../images/nomsg-img.png'></image>
+         <view style='margin-top:88rpx;font-size:28rpx;color:#666666'>{{text}}</view>
+         <button bindtap='fn' class='noMsg-box-btn'>{{btntetx}}</button>
+    </view>
+</template>

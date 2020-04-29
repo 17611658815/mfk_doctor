@@ -1,0 +1,7 @@
+<template name="showMsg">
+    <view class='showMsg-box'>
+          <view>该科室没有更多问题了，您可以试试联系客服增加您所在科室的问题哟~</view>  
+          <view>联系客服</view>  
+          <button class="contact" open-type='contact' hover-class='none'></button>
+    </view>
+</template>

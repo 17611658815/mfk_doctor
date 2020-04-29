@@ -1,0 +1,31 @@
+<template name="doctorinfo">
+    <view class='doctorinfo-box' wx:for="{{doctorList}}" wx:key='key'>
+        <view class='InfoBox'>
+            <view class="userPic db">
+                <image src="{{(item.avatar != '') ? item.avatar : '../../../images/head.png'}}"></image>
+            </view>
+            <view>
+                <view class="doctor_name">
+                    <view class="leftName">
+                        <text>{{item.name}}</text>
+                        <text>{{item.position}}</text>
+                    </view>
+                    <view>
+                        {{item.money == "" ? item.money : "+"+item.money}}
+                    </view>
+                </view>
+                <view>
+                    <text style="font-size: 28rpx;color: #999999;padding-right: 20rpx">{{item.hospital}}</text>
+                    <text style="font-size: 28rpx;color: #999999;padding-right: 20rpx">{{item.department}}</text>
+                </view>
+                <view>
+                    <text style="font-size: 28rpx;color: #6ea8f7;">邀请进度：</text>
+                    <text style="font-size: 28rpx;color: #6ea8f7;">{{item.speed}}</text>
+                </view>
+                <view style="font-size: 24rpx;color: #999999;margin-top: 10rpx">
+                    <text>{{item.time}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

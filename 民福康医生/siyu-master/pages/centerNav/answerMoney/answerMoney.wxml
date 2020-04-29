@@ -1,0 +1,26 @@
+<import src="../../../template/centerNavheader/centerNavheader.wxml">
+</import>
+<import src="../../../template/noMoney/noMoney.wxml"></import>
+<import src="../../../template/showToast.wxml"></import>
+<import src="answerList.wxml"></import>
+<scroll-view style='height:100%;width:100%;'>
+    <view class='mayvideo-header'>
+        <template is="centerNavheader" data='{{textArr:textArr,showExplain:showExplain,invitationNum:invitationNum,profit:profit,mouthProfit:mouthProfit}}'></template>
+    </view>
+    <view class='answer-content'>
+        <view style='font-size:32rpx;color:#333333;margin-top:40rpx;font-weight:500' wx:if='{{questionList.length>0}}'>已通过审核的问题</view>
+        <!-- <template is="answerList" wx:if='{{questionList.length>0}}' data='{{questionList:questionList}}'></template> -->
+        <view class='answerList-content' wx:for='{{questionList}}' wx:if='{{questionList.length>0}}' wx:key='key'>
+            <view class='answerList-content-title'>
+                <view>{{item.title}}</view>
+                <view>+{{item.money}}</view>
+            </view>
+            <view class='answerList-content-timer'>
+                <text>{{item.time}}</text>
+            </view>
+        </view>
+        <template is="noMoney" data='{{fn:fn,text:"暂无审核通过的问题哟~",btntetx:"去答题赚奖励",btnShow:false,type:"1"}}' wx:if="{{questionList.length==0}}"></template>
+    </view>
+</scroll-view>
+
+<template is="showToast" wx:if='{{showToast}}'></template>

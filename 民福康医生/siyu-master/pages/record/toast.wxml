@@ -1,0 +1,13 @@
+<template name="showToast">
+    <view class='showMsg-box' style="display: flex">
+        <view>
+            <image src="../../images/time.png"></image>
+        </view>
+        <view>
+           <view>音频正在拼命转译中，每一秒知识都值得等待</view>
+            <view>预计转译倒计时:
+                <text>{{et_tiem}}</text>秒
+            </view>
+        </view>
+        </view>
+</template>

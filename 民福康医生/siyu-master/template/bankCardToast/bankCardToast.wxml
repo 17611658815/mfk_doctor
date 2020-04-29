@@ -1,0 +1,17 @@
+<template name="bankCard">
+    <view class='toast-box'>
+        <view class='toast-box-content'>
+            <view class='toast-box-content-title'>
+               加强音频审核通知
+            </view>
+            <view class='toast-box-content-item'>
+               本平台为了能提供给广大用户专业、精准、可信任的医学科普内容，塑造医生品牌形象，将坚持严格的审校制度，严把内容质量关，进一步加强对音频内容的审核，自今日起对本平台所有音频数据实施三审三校制度，审核周期将有所延长，希望各位医生理解。
+            </view>
+            <view class='toast-box-content-item'>
+                 感谢您一直以来对民福康的支持与信任，给您带来的不便，敬请谅解！如有疑问，请致电民福康客服电话010-59231588
+            </view>
+            <view class='toast-box-content-btn' catchtap='closeToast'>我知道了</view>
+            <image catchtap='closeToast' class='delicon' src='../../images/icon/del_icon.png'></image>
+        </view>
+    </view>
+</template>

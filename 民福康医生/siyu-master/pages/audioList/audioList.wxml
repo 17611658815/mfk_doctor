@@ -1,0 +1,155 @@
+<!-- 审核失败 -->
+<!-- <button open-type="openSetting">授权</button> -->
+<view class='contents' wx:if="{{code2 == false}}">
+    <view class='img_box2'>
+        <image src='../../images/shenheshibai.png'></image>
+        <view class='titles1'>您的资质未通过审核,工作站暂时无法使用</view>
+        <view class='err'>
+            <text>审核未通过原因：</text>
+            <text>{{err}}</text>
+        </view>
+    </view>
+    <button class='anewBtn' bindtap='goUploadagain'>重新认证</button>
+</view>
+<!-- 审核中 -->
+<view class='contents' wx:elif="{{code == false}}">
+    <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+        <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+        <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+    </view>
+    <view class='img_box'>
+        <image src='../../images/shenhezhong.png'></image>
+        <view> 您的医生资质尚未认证，工作站暂时无法使用</view>
+    </view>
+</view>
+<!-- 有审核通过 -->
+<view class="commonIllnessBox" style="height:100%; width: {{windowWidth}}px;" wx:else>
+<import src="showModule"></import>
+     <template is="bankCard" wx:if='{{listShowModule}}'></template>
+    <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+        <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+        <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+    </view>
+    <!-- 搜索框 -->
+    <view class="searchBox" bindtap='goSearch'>
+        <view class="search clearfix">
+            <view class="searchInput fl">请输入疾病或问题关键词</view>
+            <text class="lineShu db fl"></text>
+            <image class="searchIcon fr" src="../../images/search.png"></image>
+        </view>
+    </view>
+    <view class='selfAsk'>
+        <view class="selfAskLeft">
+            <image class='zezd' src='../../images/services.png'></image>
+            <text class='text_1'>联系客服</text>
+            <text class='text_2'></text>
+        </view>
+        <button class="contact" open-type='contact' hover-class='none'></button>
+        <image class='rights' src='../../images/right_img.png'></image>
+    </view>
+    <view wx:if="{{adeptList.length > 0 && illnessList.length > 0}}" class='switchTab'>
+        <view data-index='{{index}}' bindtap='switchTab' wx:for="{{arr}}" wx:key='key'>
+            <text class='{{switchTab == index ? "styles" : ""}}'> {{item}}</text>
+        </view>
+    </view>
+    <navigator hover-class='none' url='/pages/addadept/addadept' class="adeptEntrance" wx:if='{{adeptArr!="" && may_record!=0}}'>
+        <view class="adeptEntrance_tag">已绑疾病:
+            <view class="tagbox">{{adeptArr}}</view>等
+            <view>{{adeptArrlength}}</view>个疾病</view>
+        <view class="adeptEntrance_btn">绑定疾病</view>
+    </navigator>
+    <view class='earnings' wx:if="{{adeptList!='' || illnessList!=''}}">
+        <view class='earnings_content'>
+            您的答题单价为
+            <text style='color:#6ea8f7'>￥{{answer_price}}/题</text>,今日已答
+            <text style='color:#6ea8f7'>{{num}}</text>题~
+        </view>
+    </view>
+    <!-- 全部问题 -->
+    <view class="commonIllnessList" wx:if="{{illnessList.length>0 && switchTab==1}}">
+        <block wx:for="{{illnessList}}" wx:key="*this" wx:if='{{illnessList.length>0}}'>
+            <view bindtap="gotoRecord" class='question' data-index='{{index}}' data-title="{{item.title}}" data-questionId="{{item.id}}" data-age="{{item.age}}" data-question="{{item.question}}">
+                <view class='content'>
+                    <view class='content_box'>
+                        <view class='question_title'>
+                            <view class='question_title_title'>
+                                <view>{{item.title}}
+                                    <image src='../../images/green.png' wx:if="{{item.is_car > 0}}"></image>
+                                    <!-- <image src='../../images/hot.png' wx:elif="{{item.topid > 0 && item.is_car == 0}}"></image> -->
+                                    <image src='../../images/tuijian.png' wx:else></image>
+                                </view>
+                            </view>
+                        </view>
+                        <view class='docNum'>
+                            <view>
+                                <text>{{item.doc_num}}名医生可答</text>
+                            </view>
+                            <view>
+                                <view class='price'></view>
+                                <view class='answer'>抢答</view>
+                            </view>
+                        </view>
+                        <view class='askNum'>{{item.ask_num}}人在寻求此问题的答案</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='noClass' wx:if="{{illnesslengthNum == 0 && switchTab==1}}">
+        <view class="noClassBox">
+            <image class="noting db" src="../../images/kb.png"></image>
+            <text class="prompt db">暂无您擅长疾病问题~您可重新绑定擅长疾病</text>
+            <navigator hover-class='none' url='/pages/addadept/addadept' class="notingBtn">绑定疾病</navigator>
+        </view>
+    </view>
+    <view class='noClass' wx:if="{{may_record==0 && switchTab==1 && illnesslengthNum == 1}}">
+        <view class="noClassBox">
+            <image class="noting db" src="../../images/kb.png"></image>
+            <text class="prompt db">您的50次答题次数已用光，请点击按钮向客服申请增加答题次数，谢谢~</text>
+            <button open-type='contact' hover-class='none' url='/pages/addadept/addadept' class="notingBtn">咨询客服</button>
+        </view>
+    </view>
+    <!-- 擅长问题 -->
+    <view class="commonIllnessList" wx:if="{{adeptList.length>0 && switchTab==0}}">
+        <block wx:for="{{adeptList}}" wx:key="id">
+            <view bindtap="gotoRecord" class='question' data-index='{{index}}' data-title="{{item.title}}" data-questionId="{{item.id}}" data-age="{{item.age}}" data-question="{{item.question}}">
+                <view class='content'>
+                    <view class='content_box'>
+                        <view class='question_title'>
+                            <view class='question_title_title'>{{item.title}}
+                                <image src='../../images/green.png' wx:if="{{item.is_car > 0}}"></image>
+                                <!-- <image src='../../images/hot.png' wx:elif="{{item.topid > 0 && item.is_car == 0}}"></image> -->
+                                <image src='../../images/tuijian.png' wx:else></image>
+                            </view>
+                        </view>
+                        <view class='docNum'>
+                            <view>
+                                <text>{{item.doc_num}}名医生可答</text>
+                            </view>
+                            <view>
+                                <view class='price'></view>
+                                <view class='answer'>抢答</view>
+                            </view>
+                        </view>
+                        <view class='askNum'>{{item.ask_num}}人在寻求此问题的答案</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='noClass' wx:if="{{adeplengthNum == 0 && switchTab==0}}">
+        <view class="noClassBox">
+            <image class="noting db" src="../../images/kb.png"></image>
+            <text class="prompt db">暂无您擅长疾病问题~您可重新绑定擅长疾病</text>
+            <navigator hover-class='none' url='/pages/addadept/addadept' class="notingBtn">绑定疾病</navigator>
+        </view>
+    </view>
+    <view class='noClass' wx:if="{{may_record==0 && switchTab==0}}">
+        <view class="noClassBox">
+            <image class="noting db" src="../../images/kb.png"></image>
+            <text class="prompt db">您的50次答题次数已用光，请点击按钮向客服申请增加答题次数，谢谢~</text>
+            <button open-type='contact' hover-class='none' url='/pages/addadept/addadept' class="notingBtn">咨询客服</button>
+        </view>
+    </view>
+</view>
+<image class="gotop" src="../../images/top.png" bindtap="goTop" wx:if='{{isGoTop}}'></image>

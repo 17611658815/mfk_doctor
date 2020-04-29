@@ -1,0 +1,58 @@
+<!--pages/maybankCard/maybankCard.wxml-->
+<view class='container' wx:if='{{flag}}'>
+    <view class="bank_title" wx:if='{{name==""}}'>
+        为了不影响您的收益发放，请您务必尽快添加银行卡信息~
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="inptBox">
+            <view class="inptBox_leaber">姓名</view>
+            <input class="inptBox_val input" name="name" type='text' value="{{name}}" placeholder-class="phcolor" placeholder="收款人姓名"></input>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">银行卡号</view>
+            <input class="inptBox_val input" type='number' name="banekNum" value="{{banekNum}}" placeholder-class="phcolor" placeholder="收款人储蓄卡号"></input>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">开户行全称</view>
+            <input class="inptBox_val input" type='text' name="banekName" value="{{banekName}}" placeholder-class="phcolor" placeholder="请输入开户行全称"></input>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">身份证号</view>
+            <input class="inptBox_val input" type='text' name="idCard" value="{{idCard}}" placeholder-class="phcolor" placeholder="收款人本人身份证号"></input>
+        </view>
+        <button class="addBtn" form-type="submit" wx:if='{{name == "" || bank_status == 2}}'>
+            提交
+        </button>
+    </form>
+</view>
+<view class='container' wx:if='{{!flag}}'>
+    <view class='headers'>
+        <view>
+            <image mode='aspectFill' src='../../images/icon/check_icon_5.png'></image>
+            <view>银行卡信息提交成功!</view>
+            <view style="margin-top:10rpx;">客服会在3个工作日内进行审核，请您耐心等待~</view>
+        </view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="inptBox">
+            <view class="inptBox_leaber">姓名</view>
+            <view class="inptBox_val input">{{name}}</view>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">银行卡号</view>
+             <view class="inptBox_val input">{{banekNum}}</view>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">开户行全称</view>
+            <view class="inptBox_val input">{{banekName}}</view>
+        </view>
+        <view class="inptBox">
+            <view class="inptBox_leaber">身份证号</view>
+            <view class="inptBox_val input">{{idCard}}</view>
+        </view>
+        <view class="bank_btnBox">
+            <view bindtap="goindex">返回工作站</view>
+            <view bindtap="goCenter">返回个人中心</view>
+        </view>
+    </form>
+</view>

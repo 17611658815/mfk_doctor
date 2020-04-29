@@ -1,0 +1,35 @@
+/* pages/centerNav/deposit/deposit.wxss */
+.deposit-content{
+    width: 90%;
+    margin: auto;
+    padding: 40rpx 0;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.deposit-content-money{
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.deposit-content-time{
+    font-size: 24rpx;
+    color: #999999;
+    margin-top: 20rpx;
+}
+.deposit-content-time text{
+    margin-right: 20rpx;
+}
+.contens{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contens image{
+    width: 283rpx;
+    height: 219rpx;
+}
+.textCenter{
+    text-align: center;
+}

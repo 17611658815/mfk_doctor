@@ -1,0 +1,11 @@
+<template name="depositList">
+<view class='deposit-content' wx:for='{{profitInfoList}}' wx:key='key'>
+        <view class='deposit-content-money'>
+            <text style='color:#000000'>{{item.comment}}</text>
+            <text style='color:#333333'>{{item.money}}</text>
+        </view>
+        <view  class='deposit-content-time'>
+        <text>{{item.time}}</text>
+        </view>
+    </view>
+</template>

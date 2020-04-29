@@ -1,0 +1,213 @@
+
+
+.commonIllnessList {
+  padding-bottom: 80rpx;
+}
+
+.commonIllnessList .question {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 10rpx;
+  border-bottom: 20rpx solid #f8f8f8;
+  position: relative;
+}
+
+.content_box {
+  width: 90%;
+  margin: auto;
+}
+
+.question_title {
+  display: flex;
+}
+
+.question_title .icon-1 {
+  width: 35rpx;
+  height: 35rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 35rpx;
+  background: #6ea8f7;
+  color: #fff;
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  border-radius: 5rpx;
+  padding: 2rpx;
+}
+
+.question_title .icon-2 {
+  width: 35rpx;
+  height: 35rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 35rpx;
+  background: #e7521a;
+  color: #fff;
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  border-radius: 5rpx;
+  padding: 2rpx;
+}
+
+.question_title_title {
+  flex: 1;
+  min-height: 32rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.question_title_title image {
+  width: 47rpx;
+  height: 33rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.askNum {
+  width: 100%;
+  color: #6ea8f7;
+  font-size: 26rpx;
+  margin-top: 24rpx;
+  margin-bottom: 30rpx;
+}
+
+
+.docNum {
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d1d1d1;
+}
+
+.docNum>view:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.docNum>view:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.docNum>view:nth-child(2) .price {
+  padding: 0 10rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: red;
+  margin-right: 20rpx;
+}
+
+.docNum>view:nth-child(2) .answer {
+  width: 123rpx;
+  height: 58rpx;
+  text-align: center;
+  line-height: 58rpx;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 44px 44px 44px 44px;
+  background: #6ea7f7;
+}
+
+.docNum image {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 20rpx;
+}
+
+.docNum text {
+  color: #999;
+  font-size: 26rpx;
+}
+
+
+.contents {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.img_box {
+  width: 80%;
+  margin: auto;
+  margin-top: 380rpx;
+}
+
+.img_box image {
+  width: 303rpx;
+  height: 209rpx;
+  margin-left: 20rpx;
+}
+
+.img_box view {
+  margin-top: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.img_box2 {
+  width: 80%;
+  margin: auto;
+  margin-top: 325rpx;
+}
+
+.img_box2 image {
+  width: 303rpx;
+  height: 209rpx;
+  margin-left: 20rpx;
+}
+
+.img_box2 .titles1 {
+  margin-top: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.img_box2 .err {
+  /* text-align: left; */
+  font-size: 30rpx;
+  color: #ff973b;
+}
+
+.anewBtn {
+  width: 382rpx;
+  margin-top: 80rpx;
+  background: linear-gradient(#6eaff7, #6e9ff7);
+  color: white;
+  border-radius: 10rpx;
+  border: none;
+}
+
+.fastTitleBox{
+  width: 660rpx;
+  height: 88rpx;
+  padding: 0 53rpx;
+  line-height: 88rpx;
+  background: #f8f8f8f8;
+}
+.fastTitle{
+  font-size: 28rpx;
+  color: #ff7f29;
+}
+.fastBtn{
+  width: 136rpx;
+  height: 60rpx;
+  background: #6E9FF7;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 75rpx;
+  margin-top: 15rpx;
+}
+
+

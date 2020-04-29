@@ -1,0 +1,47 @@
+<view class='progress'>
+    <view class='progress_left'>
+        <view>
+            <image class='inco_1' src='../../images/icon/addplay_icon.png'></image>
+        </view>
+        <view></view>
+        <view>
+             <image class='inco_2' src='../../images/icon/toaudit_icon.png'></image>
+        </view>
+        <view></view>
+          <view>
+             <image class='inco_3' src='../../images/icon/dey_icon.png'></image>
+        </view>
+    </view>
+    <view class='progress_right'>
+        <view class='progress_right_toast'>提现申请已提交</view>
+        <view class='progress_right_none'>待审核</view>
+        <view class='progress_right_progress'>
+            <view>
+                预计1-3个工作日内到账，最快当天到账
+            </view>
+            <view>
+                客服小姐姐会加紧处理的，请耐心等待哟~
+            </view>
+        </view>
+    </view>
+</view>
+<view class='play_detaile'>
+    <view class='play_detaile_item'>
+        <view class='play_detaile_item_left'>提现方式</view>
+        <view class='play_detaile_item_right'>
+             <image src='../../images/icon/wx_icon.png'></image>
+                <text>微信零钱</text>
+        </view>
+    </view>
+    <view class='play_detaile_item'>
+        <view class='play_detaile_item_left'>提现金额</view>
+        <view class='play_detaile_item_right'>￥{{money}}</view>
+    </view>
+    <view class='play_detaile_item'>
+        <view class='play_detaile_item_left'>申请时间</view>
+        <view class='play_detaile_item_right'>{{time}}</view>
+    </view>
+</view>
+<view class='fixedStyle'>
+<button style='width:80%;' bindtap='goindex' class='noMsg-box-btn'>完成</button>
+</view>

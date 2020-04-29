@@ -1,0 +1,9 @@
+<scroll-view style='height:100%;width:100%'>
+     <image style="width:100%; display: block;" mode="widthFix" src="https://api.mfk.com/statics/images/channel_img.jpg?666"></image>
+    <!-- <navigator url='/pages/joinMFk/joinMFk'> -->
+    <view class='item_box'></view>
+        <button bindtap="onShareAppMessage" hover-class="none" open-type='share'>
+            邀请医生入驻
+        </button>
+    <!-- </navigator> -->
+</scroll-view>

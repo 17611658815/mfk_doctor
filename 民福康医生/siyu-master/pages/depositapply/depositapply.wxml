@@ -1,0 +1,27 @@
+<view class='apply'>
+    <view class='applyMethod'>
+        <view class='apply_type'>提现方式</view>
+        <view class='apply_type_icon'>
+            <view class='apply_type_icon_left'>
+                <image src='../../images/icon/wx_icon.png'></image>
+                <text>微信零钱</text>
+            </view>
+            <!-- <view class='apply_type_icon_right'>
+                <image src='../../images/icon/checked_icon.png'></image>
+            </view> -->
+        </view>
+    </view>
+    <view class='apply_title'>
+        提现金额
+    </view>
+    <view class='applyInput'>
+        <view>￥</view>
+        <input type='number' auto-focus='true' bindinput='moneyNumFn' value='{{moneyNum}}'></input>
+    </view>
+    <view class='apply-time'>
+        <text wx:if='{{moneyNum!=""}}'>申请时间:{{time}}</text>
+        <text wx:if='{{moneyNum==""}}'>可提现收益￥{{money}}，</text>
+        <text wx:if='{{moneyNum==""}}' style='color:#6ea8f7' bindtap='alldepositapply'>全部提现</text>
+    </view>
+    <button bindtap='confirm' class='noMsg-box-btn' bindtap='pushCashOut'>立即提现</button>
+</view>

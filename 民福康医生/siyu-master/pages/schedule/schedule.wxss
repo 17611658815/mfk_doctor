@@ -1,0 +1,126 @@
+.progress{
+    display: flex;
+    width: 80%;
+    height: 300rpx;
+    margin: auto;
+    margin-top: 60rpx;
+    justify-content: center;
+}
+.progress_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.progress_left view:nth-child(1){
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 10rpx;
+}
+.progress_left view:nth-child(2){
+    flex: 1;
+    display: block;
+    border: 2rpx dashed #53a2ef;
+    margin-top: 3rpx;
+}
+.progress_left view:nth-child(4){
+    flex: 1;
+    display: block;
+    border: 2rpx dashed #999999;
+    margin-top: 3rpx;
+}
+.progress_left view:nth-child(3){
+    width: 40rpx;
+    height: 40rpx;
+}
+.progress_left view:nth-child(3) image{
+    width: 100%;
+    height: 100%;
+}
+.progress_left view:nth-child(5){
+    width: 32rpx;
+    height: 32rpx;
+    display: block;
+}
+.progress_left view:nth-child(5) image{
+    width: 100%;
+    height: 100%;
+ }
+.progress_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 48rpx;
+}
+.progress_right_toast{
+    font-size: 32rpx;
+    color: #999999;
+    flex: 1;
+    margin-top: 10rpx;
+}
+.progress_right_progress{
+    flex: 1;
+    margin-top: 80rpx;
+   
+}
+.progress_right_progress view:nth-child(1){
+    font-size: 32rpx;
+    color: #333333;
+    white-space : nowrap ;
+}
+.progress_right_progress view:nth-child(2){
+    font-size: 26rpx;
+    color: #999999;
+}
+.inco_1{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.progress_right_none{
+    flex: 1;
+    font-size:32rpx;
+    margin-top: 85rpx;
+
+
+}
+.play_detaile{
+    width: 94%;
+    padding: 40rpx 0;
+    border-top: 1rpx solid #e2e2e2;
+    margin: auto;
+    margin-top: 95rpx;
+}
+.play_detaile_item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+.play_detaile_item_left{
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+    color: #333333;
+    
+}
+.play_detaile_item_right{
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+}
+.play_detaile_item_right image{
+    width:40rpx;
+    height:40rpx;
+    margin-right:20rpx;
+
+}
+.fixedStyle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 100rpx;
+    left:0;
+}

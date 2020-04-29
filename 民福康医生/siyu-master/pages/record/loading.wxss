@@ -1,0 +1,25 @@
+.showMsg-box{
+	width: 90%;
+    padding: 15rpx 5%;
+	background: #FBEFD9;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	animation: myfirst 0.5s;
+    color: #FD9655;
+    font-size: 26rpx;
+}
+.showMsg-box image{
+    width: 50rpx;
+    height: 50rpx;
+   
+}
+@keyframes myfirst {
+	0% {
+		top: -100rpx;
+	}
+	100% {
+		left: 0;
+	}
+}

@@ -1,0 +1,59 @@
+.centerNavheader-header{
+    width: 100%;
+    height: 220rpx;
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+}
+.centerNavheader-header image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220rpx;
+}
+.centerNavheader-header view{
+    z-index: 9;
+}
+.centerNavheader-header-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.centerNavheader-header-item-num{
+    font-size: 42rpx;
+    color: #ffffff;
+     text-align: center;
+}
+.centerNavheader-header-item-txt{
+    font-size: 30rpx;
+    color:rgba(255,255,255,.7);
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.explain-Toast{
+    display: block;
+    margin-left: 10rpx;
+    padding: 5rpx 10rpx;
+    font-size: 16rpx;
+    background: #ffffff;
+    color: #6ea3f7;
+    border-radius: 44rpx 44rpx 44rpx 0;
+    position: relative;
+}
+.main5 {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    left: 0;
+    bottom: -5rpx;
+}

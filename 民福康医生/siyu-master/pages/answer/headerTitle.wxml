@@ -1,0 +1,32 @@
+<template name="headerTitle">
+    <view class='centerNavheader-header'>
+        <image src='../../images/maivideo_bg.jpg'></image>
+        <!-- 本月个数 -->
+        <view class='centerNavheader-header-item'>
+            <view class='centerNavheader-header-item-num'>
+               {{dayNum}}
+            </view>
+            <view class='centerNavheader-header-item-txt'>
+                {{textArr[0]}}
+            </view>
+        </view>
+        <!-- 累计个数 -->
+        <view class='centerNavheader-header-item'>
+            <view class='centerNavheader-header-item-num'>
+                {{mouthNum}}
+            </view>
+            <view class='centerNavheader-header-item-txt'>
+                {{textArr[1]}}  
+            </view>
+        </view>
+        <!-- 累计奖励 -->
+        <view class='centerNavheader-header-item'>
+            <view class='centerNavheader-header-item-num'>
+                {{totalNum}}
+            </view>
+            <view class='centerNavheader-header-item-txt'>
+            {{textArr[2]}} 
+            </view>
+        </view>
+    </view>
+</template>

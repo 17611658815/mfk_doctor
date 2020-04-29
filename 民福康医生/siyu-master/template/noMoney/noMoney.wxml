@@ -1,0 +1,9 @@
+<template name="noMoney">
+    <view class="noMoney-box">
+         <image src='../../../images/nomsg-img.png'></image>
+         <view style='margin-top:88rpx;font-size:28rpx;color:#666666'>{{text}}</view>
+         
+         <button bindtap='fn' wx:if='{{btnShow}}' open-type='share' class='noMoney-box-btn'>{{btntetx}}</button>
+         <button bindtap='fn' wx:if='{{type == 1}}' class='noMoney-box-btn'>{{btntetx}}</button>
+    </view>
+</template>

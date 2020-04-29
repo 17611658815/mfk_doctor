@@ -1,0 +1,40 @@
+<import src="../../../template/centerNavheader/centerNavheader.wxml"></import>
+<import src="../../../template/noMoney/noMoney.wxml"></import>
+<import src="../../../template/showToast.wxml"></import>
+<import src="shareList.wxml"></import>
+<scroll-view style='height:100%;width:100%;'>
+    <view class='mayvideo-header'>
+        <template is="centerNavheader" data='{{textArr:textArr,showExplain:showExplain,invitationNum:invitationNum,profit:profit,mouthProfit:mouthProfit}}'></template>
+    </view>
+    <view class='share-content'>
+        <view style='font-size:32rpx;color:#333333;margin-top:40rpx;font-weight:500' wx:if="{{questionList.length>0}}">已通过审核的问题</view>
+        <!-- <template is="shareList" wx:if="{{questionList.length>0}}" data='{{questionList:questionList}}'></template> -->
+        <view class='answerList-content' wx:for='{{questionList}}' wx:if="{{questionList.length>0}}" wx:key='key'>
+            <view class='InfoBox' style='border:none'>
+                <view>
+                    <image src='http://pic.39yst.com/group1/M00/5E/B0/Pb832l1HxA-AQIJcAAAZS9VZE_4771.png'></image>
+                </view>
+                <view>
+                    <view>
+                        <text>{{item.doctor.name}}</text>
+                        <text>{{item.doctor.position}}</text>
+                    </view>
+                    <view class="doc_hospital">
+                        <view class="doc_hospital_name">
+                            <text>{{item.doctor.hospital}}</text>
+                            <text class="maegin-left">{{item.doctor.department}}</text>
+                        </view>
+                        <view class="doc_hospital_money">+{{item.money}}</view>
+                    </view>
+                    <view class='answerList-content-title'>
+                        <view style='color:#6ea3f7'>{{item.title}}</view>
+                        <view style='margin-top:20rpx'>{{item.time}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <template is="noMoney" data='{{fn:onShareAppMessage,text:"暂无邀请好友答题过审哟~",btntetx:"邀请好友来答题",btnShow:true}}' wx:if="{{questionList.length==0}}"></template>
+    </view>
+</scroll-view>
+
+<template is="showToast" wx:if='{{showToast}}'></template>
